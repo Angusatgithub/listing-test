@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Listing Test</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Listings</h1>
+        <div class="listing">
+          <div class="agent-banner">
+            <p>Pippin<span>&</span>Hall</p>
+            <img src="Hackerman.jpeg" />
+          </div>
+          <img src="house.webp" />
+          <div class="listing-content">
+            <h2>Normal listing</h2>
+            <p>would ya look at this place, marvelous!</p>
+          </div>
+        </div>
+        <div class="listing">
+          <div class="agent-banner">
+            <p>Pippin<span>&</span>Hall</p>
+            <img src="Hackerman.jpeg" />
+          </div>
+          <img src="house.webp" />
+          <div class="listing-content">
+            <h2>Normal listing</h2>
+            <p>would ya look at this place, marvelous!</p>
+          </div>
+        </div>
+        <div class="listing">
+          <div class="agent-banner">
+            <p>Pippin<span>&</span>Hall</p>
+            <img src="Hackerman.jpeg" />
+          </div>
+          <img src="house.webp" />
+          <div class="listing-content">
+            <h2>Normal listing</h2>
+            <p>would ya look at this place, marvelous!</p>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="rectangles" id="rectangles">
+          <div class="rectangle">
+            <img src="house.webp" />
+            <h2>House 1</h2>
+            <p>would ya look at this place, marvelous!</p>
+          </div>
+          <div class="rectangle">
+            <img src="house2.webp" />
+            <h2>House 2</h2>
+            <p>Jeepers pretty nice place ya reckon?</p>
+          </div>
+          <div class="rectangle">
+            <img src="house3.webp" />
+            <h2>House 3</h2>
+            <p>Fwoah wouldnt mind buying this one.</p>
+          </div>
+          <div class="rectangle">
+            <img src="house4.webp" />
+            <h2>House 4</h2>
+            <p>Yeahhhh another ultra listing ya know.</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="listing">
+          <div class="agent-banner">
+            <p>Pippin<span>&</span>Hall</p>
+            <img src="Hackerman.jpeg" />
+          </div>
+          <img src="house.webp" />
+          <div class="listing-content">
+            <h2>Normal listing</h2>
+            <p>would ya look at this place, marvelous!</p>
+          </div>
+        </div>
+        <div class="listing">
+          <div class="agent-banner">
+            <p>Pippin<span>&</span>Hall</p>
+            <img src="Hackerman.jpeg" />
+          </div>
+          <img src="house.webp" />
+          <div class="listing-content">
+            <h2>Normal listing</h2>
+            <p>would ya look at this place, marvelous!</p>
+          </div>
+        </div>
+        <div class="listing">
+          <div class="agent-banner">
+            <p>Pippin<span>&</span>Hall</p>
+            <img src="Hackerman.jpeg" />
+          </div>
+          <img src="house.webp" />
+          <div class="listing-content">
+            <h2>Normal listing</h2>
+            <p>would ya look at this place, marvelous!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.addEventListener("scroll", function () {
+        var rectangles = document.querySelector("#rectangles");
+        var body = document.body;
+        var rectTop = rectangles.getBoundingClientRect().top;
+        var rectBottom = rectangles.getBoundingClientRect().bottom;
+        var windowHeight = window.innerHeight;
+        var offset = 350; // Adjust this offset as needed
+
+        if (rectTop < windowHeight - offset && rectBottom > offset) {
+          body.style.backgroundColor = "#E1DCFC";
+        } else {
+          body.style.backgroundColor = "#f6f5f7";
+        }
+      });
+    </script>
+  </body>
+</html>
