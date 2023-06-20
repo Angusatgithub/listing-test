@@ -107,23 +107,26 @@
     <script>
       window.addEventListener("scroll", function () {
         var rectangles = document.querySelector("#rectangles");
+        var rectangle = document.querySelectorAll("div.rectangle");
         var body = document.body;
         var rectTop = rectangles.getBoundingClientRect().top;
         var rectBottom = rectangles.getBoundingClientRect().bottom;
         var windowHeight = window.innerHeight;
-        var offset = 500; // Adjust this offset as needed
+        var offset = 600; // Adjust this offset as needed
 
         if (rectTop < windowHeight - offset && rectBottom > offset) {
-          body.style.backgroundColor = "#E1DCFC";
+          body.style.backgroundColor = "#992469";
           rectangle.forEach((element) => {
-            element.style.backgroundColor = "#E1DCFC";
+            element.style.backgroundColor = "#992469";
             element.style.border = "2px solid #FFFFFF";
+            element.style.color = "#FFFFFF";
           });
         } else {
           body.style.backgroundColor = "#f6f5f7";
           rectangle.forEach((element) => {
             element.style.backgroundColor = "#FFFFFF";
             element.style.border = "2px solid #E6E6E6";
+            element.style.color = "#3d3b40";
           });
           // rectangle.style.backgroundColor = "#ffffff";
         }
