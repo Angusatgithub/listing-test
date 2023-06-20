@@ -54,16 +54,20 @@ p {
 
 .rectangle {
   background-color: #fff;
-  border: 1px solid #e6e6e6;
+  border: 2px solid #e6e6e6;
   border-radius: 12px;
   width: max-content;
   height: min-content;
   padding: 12px;
   margin: 16px;
+  transition: background-color 0.35s ease-out;
+  transition: border 0.35s ease-out;
 }
 
 .rectangle img {
   width: 200px;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
 }
 
 .listing {
