@@ -111,12 +111,21 @@
         var rectTop = rectangles.getBoundingClientRect().top;
         var rectBottom = rectangles.getBoundingClientRect().bottom;
         var windowHeight = window.innerHeight;
-        var offset = 400; // Adjust this offset as needed
+        var offset = 500; // Adjust this offset as needed
 
         if (rectTop < windowHeight - offset && rectBottom > offset) {
           body.style.backgroundColor = "#E1DCFC";
+          rectangle.forEach((element) => {
+            element.style.backgroundColor = "#E1DCFC";
+            element.style.border = "2px solid #FFFFFF";
+          });
         } else {
           body.style.backgroundColor = "#f6f5f7";
+          rectangle.forEach((element) => {
+            element.style.backgroundColor = "#FFFFFF";
+            element.style.border = "2px solid #E6E6E6";
+          });
+          // rectangle.style.backgroundColor = "#ffffff";
         }
       });
     </script>
